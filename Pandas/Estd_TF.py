@@ -2,9 +2,6 @@
 #Parte 1.0 - Importando a Biblioteca
 import pandas as pd
 
-# Parte 2.0 - Salvando uma O Caminho do Arquivo em Uma Variável Para Lhor Acesso
-plantest_caminho_arqv = 'Pandas/plantest.csv'
-
 # Parte 3.0 - Criando um Dataframe do Zero
 Testframe = pd.DataFrame(
 {
@@ -14,27 +11,11 @@ Testframe = pd.DataFrame(
 index=['Linha1', 'Linha2']
 )
 
-# Parte 3.1 - Lendo os Dados de um "csv", e armazenando em um DataFrame.
-csv_data = pd.read_csv(plantest_caminho_arqv) 
-
-# Parte 3.1 - Imprimindo o DataBase
-Testlist = pd.Series([1, 2, 3, 4, 5])
 
 # Imprimindo um Sumário dos Dados
 print("***Print Test Dataframe***")
 print(Testframe)
-
-print("***Print Describe CSV***")
-print(csv_data)
-
-print("***Print Describe CSV***")
-print(csv_data.describe())
-
-csv_data['Valor A'] = range(len(csv_data), 0, -1)
-
-print("***Print Describe CSV***")
-print(csv_data)
-
-print("***Print Describe CSV***")
-print(Testlist)
+Testframe.loc['Linha1','Coluna1'] = "Teste"
+print("***Print Test Dataframe***")
+print(Testframe)
 
